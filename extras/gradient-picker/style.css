@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+   --gradient-0: transparent;
+   --gradient-1: transparent;
+   --gradient-2: transparent;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Roboto', sans-serif;
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   overflow: hidden;
+}
+
+.picker,
+.container {
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+
+.gradient {
+   height: 250px;
+   width: 250px;
+   margin-right: 40px;
+   border-radius: 35px;
+   box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+   background: var(--gradient-0);
+   background: -moz-linear-gradient(-45deg, var(--gradient-0) 0%, var(--gradient-1) 41%, var(--gradient-2) 100%);
+   background: -webkit-gradient(left top, right bottom, color-stop(0%, var(--gradient-0)), color-stop(41%, var(--gradient-1)), color-stop(100%, var(--gradient-2)));
+   background: -webkit-linear-gradient(-45deg, var(--gradient-0) 0%, var(--gradient-1) 41%, var(--gradient-2) 100%);
+   background: -o-linear-gradient(-45deg, var(--gradient-0) 0%, var(--gradient-1) 41%, var(--gradient-2) 100%);
+   background: -ms-linear-gradient(-45deg, var(--gradient-0) 0%, var(--gradient-1) 41%, var(--gradient-2) 100%);
+   background: linear-gradient(135deg, var(--gradient-0) 0%, var(--gradient-1) 41%, var(--gradient-2) 100%);
+}
+
+.picker {
+   width: 150px;
+}
+
+.picker .picker__bg {
+   width: 60px;
+   height: 60px;
+   margin-right: 15px;
+   border-radius: 8px;
+   transition: background-color .5s ease;
+   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+.picker input[type=color] {
+   position: absolute;
+   left: 0;
+   top: 0;
+   border: 0;
+   width: 60px;
+   height: 60px;
+   opacity: 0;
+   cursor: pointer;
+}
+
+.picker .picker__color {
+   color: #9CA3AF;
+   text-transform: uppercase;
+}
+
+.picker:not(:last-of-type){
+   margin-bottom: 12px;
+}
