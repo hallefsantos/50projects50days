@@ -33,7 +33,7 @@ body {
    transition: flex 0.7s ease-in;
 }
 
-.panel h3{
+.panel h3 {
    font-size: 24px;
    position: absolute;
    bottom: 20px;
@@ -56,7 +56,7 @@ body {
       width: 100vw;
    }
 
-   .panel:nth-last-child(-n+2){
+   .panel:nth-last-child(-n+2) {
       display: none;
    }
 }

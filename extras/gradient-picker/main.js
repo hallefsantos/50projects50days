@@ -16,5 +16,3 @@ function setColor(picker, index) {
    gradient[index] = picker.value
    document.documentElement.style.setProperty(`--gradient-${index}`, picker.value);
 }
-
-console.log({gradient})

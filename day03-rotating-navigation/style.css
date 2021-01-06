@@ -41,7 +41,7 @@ body {
    transform: rotate(0deg);
 }
 
-.container.show-nav .circle{
+.container.show-nav .circle {
    transform: rotate(-70deg);
 }
 

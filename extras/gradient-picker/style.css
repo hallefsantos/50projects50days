@@ -72,6 +72,6 @@ body {
    text-transform: uppercase;
 }
 
-.picker:not(:last-of-type){
+.picker:not(:last-of-type) {
    margin-bottom: 12px;
 }
