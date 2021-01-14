@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Roboto', sans-serif;
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   overflow: hidden;
+   background-position: center center;
+   background-size: cover;
+   transition: 400ms ease;
+}
+
+body::before {
+   content: '';
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   background-color: rgba(0,0,0,.7);
+   z-index: -1;
+}
+
+.slide-container {
+   box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+   height: 70vh;
+   width: 70vw;
+   position: relative;
+   overflow: hidden;
+}
+
+.slide {
+   opacity: 0;
+   height: 100vh;
+   width: 100vw;
+   background-position: center center;
+   background-size: cover;
+   position: absolute;
+   top: -15vh;
+   left: -15vw;
+   transition: 400ms ease;
+   z-index: 1;
+}
+
+.slide.active {
+   opacity: 1;
+}
+
+.arrow {
+   position: fixed;
+   background-color: transparent;
+   padding: 20px;
+   font-size: 30px;
+   border: 2px solid orange;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 100;
+   cursor: pointer;
+   color: #FFF;
+}
+
+.arrow:focus {
+   outline: 0;
+}
+
+.arrow.left-arrow {
+   left: calc(15vw - 70px);
+}
+
+.arrow.right-arrow {
+   right: calc(15vw - 70px);
+}
+
